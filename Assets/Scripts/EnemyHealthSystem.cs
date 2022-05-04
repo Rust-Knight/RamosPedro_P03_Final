@@ -7,9 +7,14 @@ public class EnemyHealthSystem : MonoBehaviour
     public int EnemyMaxHealth = 400;
     public int CurrentHealth;
 
+    
+    private AudioSource source;
+
+
     void Start()
     {
         CurrentHealth = EnemyMaxHealth;
+        //source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +36,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
             EnemyTakeDamage(20);
             Destroy(other.gameObject);
-
+            source.Play();
         }
 
     }

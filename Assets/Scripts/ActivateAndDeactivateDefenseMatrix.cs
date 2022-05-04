@@ -26,7 +26,7 @@ public class ActivateAndDeactivateDefenseMatrix : MonoBehaviour
 
             DefenseMatrixImage.SetActive(false);
 
-            Debug.Log("DefenseMatrix is on!.");
+           
         }
           
     }

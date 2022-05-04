@@ -36,7 +36,10 @@ public class DamgeController : MonoBehaviour
             TakeDamage(20);
 
         }
-
+        if (other.tag == "BlueBullet")
+        {
+            TakeDamage(20);
+        }
     }
 
     void TakeDamage(int damage)

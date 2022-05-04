@@ -171,7 +171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a5e4f0b16f7fe547a602cdcd2df7dbf, type: 2}
+  - {fileID: 2100000, guid: 759fe926aaf9d694d9d9b02c1aa736b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 507165449}
   range: 50
-  bulletImpulse: 20
+  bulletImpulse: 80
   projectile: {fileID: 6644761681462993691, guid: 84a3af5d65f986d4d9480d80cf89b42e,
     type: 3}
 --- !u!195 &578801667
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   player: {fileID: 507165449}
   range: 50
   bulletImpulse: 20
-  projectile: {fileID: 6644761681462993691, guid: 84a3af5d65f986d4d9480d80cf89b42e,
+  projectile: {fileID: 1947434002599923689, guid: 612f25131fcdc6d4f805db82999f0de2,
     type: 3}
 --- !u!54 &894166230
 Rigidbody:
@@ -3266,7 +3266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a5e4f0b16f7fe547a602cdcd2df7dbf, type: 2}
+  - {fileID: 2100000, guid: 759fe926aaf9d694d9d9b02c1aa736b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3899,7 +3899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a5e4f0b16f7fe547a602cdcd2df7dbf, type: 2}
+  - {fileID: 2100000, guid: 759fe926aaf9d694d9d9b02c1aa736b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

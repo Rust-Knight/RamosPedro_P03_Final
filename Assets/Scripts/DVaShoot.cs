@@ -33,6 +33,7 @@ public class DVaShoot : MonoBehaviour
             ShootProjectile();
             Debug.Log("Pressed Left click.");
 
+
         }
     }
 
@@ -41,6 +42,7 @@ public class DVaShoot : MonoBehaviour
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); //0.5f, 0.5f, 0 // create ray that the projectile will follow!
 
         RaycastHit hit;
+
 
 
         if (Physics.Raycast(ray, out hit))

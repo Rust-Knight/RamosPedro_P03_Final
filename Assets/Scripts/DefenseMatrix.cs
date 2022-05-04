@@ -18,21 +18,13 @@ public class DefenseMatrix : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        //If the one colliding have the tag prey it
-        //will get destroyed
+        //If the one colliding have the tag Bullet it will be destroyed
+        
 
         if (other.tag == "Bullet")
         {
             Destroy(other.gameObject);
         }
 
-
-
-        /* private void OnCollisionEnter(Collision collision)
-         {
-             if (collision.gameObject.CompareTag("Bullet"))
-             {
-                 Destroy(collision.gameObject);
-             }*/
     }
 }

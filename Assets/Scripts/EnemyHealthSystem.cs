@@ -8,7 +8,7 @@ public class EnemyHealthSystem : MonoBehaviour
     public int CurrentHealth;
 
     
-    private AudioSource source;
+    //private AudioSource source;
 
 
     void Start()
@@ -36,7 +36,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
             EnemyTakeDamage(20);
             Destroy(other.gameObject);
-            source.Play();
+            //source.Play();
         }
 
     }

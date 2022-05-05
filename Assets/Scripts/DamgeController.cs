@@ -10,14 +10,17 @@ public class DamgeController : MonoBehaviour
 
     public DVaHealthBar healthBar;
 
+    private AudioSource source;// hit sound 
 
     void Start()
     {
         CurrentHealth = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
+        source = GetComponent<AudioSource>(); // hit sound 
+
     }
 
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
@@ -34,11 +37,15 @@ public class DamgeController : MonoBehaviour
         {
 
             TakeDamage(20);
-
+            
+            
+            source.Play(); // hit sound 
         }
         if (other.tag == "BlueBullet")
         {
             TakeDamage(20);
+
+            source.Play(); // hit sound 
         }
     }
 

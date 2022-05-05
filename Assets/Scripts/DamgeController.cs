@@ -10,13 +10,15 @@ public class DamgeController : MonoBehaviour
 
     public DVaHealthBar healthBar;
 
-    private AudioSource source;// hit sound 
+    [SerializeField] // add audio to shot
+    private AudioClip _takeDamage;
+    private AudioSource _audioSourcetakeDamage;
 
     void Start()
     {
         CurrentHealth = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
-        source = GetComponent<AudioSource>(); // hit sound 
+        _audioSourcetakeDamage = GetComponent<AudioSource>(); // hit sound 
 
     }
 
@@ -37,15 +39,17 @@ public class DamgeController : MonoBehaviour
         {
 
             TakeDamage(20);
-            
-            
-            source.Play(); // hit sound 
+
+
+            _audioSourcetakeDamage.Play(); // hit sound 
         }
         if (other.tag == "BlueBullet")
         {
             TakeDamage(20);
 
-            source.Play(); // hit sound 
+            _audioSourcetakeDamage.Play(); // hit sound 
+
+            Destroy(other.gameObject); // destroy 
         }
     }
 
@@ -54,6 +58,15 @@ public class DamgeController : MonoBehaviour
         CurrentHealth -= damage;
 
         healthBar.SetHealth(CurrentHealth);
+
+        if (_audioSourcetakeDamage == null) // audio find code
+        {
+            Debug.LogError("The shot audio for DVa was not found!");
+        }
+        else
+        {
+            _audioSourcetakeDamage.clip = _takeDamage;
+        } // end audio
     }
 
     void AddHealth(int AddHelath)

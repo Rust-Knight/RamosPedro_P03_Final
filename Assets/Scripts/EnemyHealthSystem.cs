@@ -7,14 +7,17 @@ public class EnemyHealthSystem : MonoBehaviour
     public int EnemyMaxHealth = 400;
     public int CurrentHealth;
 
-    
-    //private AudioSource source;
 
+    //private AudioSource source;
+    [SerializeField]
+    private AudioClip _takingDamage;
+    private AudioSource _audioSource;
 
     void Start()
     {
         CurrentHealth = EnemyMaxHealth;
-        //source = GetComponent<AudioSource>();
+
+        _audioSource = GetComponent<AudioSource>(); // audio taking damage
     }
 
     // Update is called once per frame
@@ -36,7 +39,7 @@ public class EnemyHealthSystem : MonoBehaviour
 
             EnemyTakeDamage(20);
             Destroy(other.gameObject);
-            //source.Play();
+            _audioSource.Play();
         }
 
     }
@@ -44,6 +47,18 @@ public class EnemyHealthSystem : MonoBehaviour
     void EnemyTakeDamage(int damage)
     {
         CurrentHealth -= damage;
+
+        if (_audioSource == null)
+        {
+            Debug.LogError("Enemy taking damage audio missing!");
+        }
+
+        else
+        {
+            _audioSource.clip = _takingDamage; // damag audio set! 
+        }
+
+
 
         //healthBar.SetHealth(CurrentHealth);
     }

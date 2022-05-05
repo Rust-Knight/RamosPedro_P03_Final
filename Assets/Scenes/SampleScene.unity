@@ -1141,6 +1141,7 @@ MonoBehaviour:
   fireRate: 10
   projectile: {fileID: 6442074670850298745, guid: 2fe4e10680efbbf4bb56256147e9cdc6,
     type: 3}
+  _shot: {fileID: 8300000, guid: 0bcbfbf34550dee43ac77c9c599bfb9b, type: 3}
 --- !u!114 &507165452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefenseMatrix: {fileID: 51658729}
   DefenseMatrixImage: {fileID: 431322771}
+  DefenseMatrixImageActive: {fileID: 963545820}
 --- !u!114 &507165454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,6 +1185,7 @@ MonoBehaviour:
   MaxHealth: 400
   CurrentHealth: 0
   healthBar: {fileID: 1907457913}
+  _takeDamage: {fileID: 8300000, guid: 641075a4b8b098a488a823e50c344420, type: 3}
 --- !u!65 &507165455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1206,7 +1209,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 641075a4b8b098a488a823e50c344420, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2214,6 +2217,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 507165449}
+--- !u!1 &963545820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963545821}
+  - component: {fileID: 963545823}
+  - component: {fileID: 963545822}
+  m_Layer: 5
+  m_Name: DFUIactive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &963545821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963545820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1184182142}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 586, y: -381.2}
+  m_SizeDelta: {x: 125, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &963545822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963545820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ecffceceeaa6f4b4586b8ecda4e2b2ce, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &963545823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963545820}
+  m_CullTransparentMesh: 0
 --- !u!1 &991110626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2365,7 @@ GameObject:
   - component: {fileID: 1048964839}
   - component: {fileID: 1048964838}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: DFUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,6 +2565,7 @@ RectTransform:
   - {fileID: 1907457912}
   - {fileID: 762654602}
   - {fileID: 1048964837}
+  - {fileID: 963545821}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

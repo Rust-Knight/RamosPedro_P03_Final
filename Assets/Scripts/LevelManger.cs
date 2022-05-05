@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LevelManger : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    
+
     void Start()
     {
         
@@ -18,5 +20,11 @@ public class LevelManger : MonoBehaviour
             Application.Quit();
             Debug.Log("Closed the game!.");
         }
+
+       
     }
+
+
+
+
 }

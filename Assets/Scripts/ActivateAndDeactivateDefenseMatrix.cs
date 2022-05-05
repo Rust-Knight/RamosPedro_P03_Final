@@ -6,6 +6,7 @@ public class ActivateAndDeactivateDefenseMatrix : MonoBehaviour
 {
     public GameObject DefenseMatrix;
     public GameObject DefenseMatrixImage;
+    public GameObject DefenseMatrixImageActive;
     void Start()
     {
         
@@ -19,6 +20,7 @@ public class ActivateAndDeactivateDefenseMatrix : MonoBehaviour
             DefenseMatrix.SetActive(true);
             Debug.Log("DefenseMatrix is on!.");
             DefenseMatrixImage.SetActive(true); // defese matrix image
+            DefenseMatrixImageActive.SetActive(true);
         }
         else
         {
@@ -26,7 +28,10 @@ public class ActivateAndDeactivateDefenseMatrix : MonoBehaviour
 
             DefenseMatrixImage.SetActive(false);
 
-           
+            DefenseMatrixImageActive.SetActive(false);
+
+
+
         }
           
     }

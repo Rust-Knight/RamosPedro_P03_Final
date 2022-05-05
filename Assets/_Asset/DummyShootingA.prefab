@@ -841,7 +841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyMaxHealth: 400
   CurrentHealth: 400
-  projectileEaten: {fileID: 0}
+  _takingDamage: {fileID: 8300000, guid: b8039e43d56406c4f8840a2c8d53cef5, type: 3}
 --- !u!82 &9170820505336872920
 AudioSource:
   m_ObjectHideFlags: 0
@@ -852,7 +852,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 641075a4b8b098a488a823e50c344420, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

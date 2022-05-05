@@ -14,13 +14,22 @@ public class DVaShoot : MonoBehaviour
 
     public GameObject projectile;
     private bool leftCannon;
-    private float timeToFire; 
-    
+    private float timeToFire;
+
+
+    [SerializeField] // add audio to shot
+    private AudioClip _shot;
+    private AudioSource _audioSourceDVaShot;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audioSourceDVaShot = GetComponent <AudioSource>(); // Audio Dva shot!
+       
     }
 
     // Update is called once per frame
@@ -31,6 +40,9 @@ public class DVaShoot : MonoBehaviour
 
             timeToFire = Time.time + 1 / fireRate;
             ShootProjectile();
+
+            _audioSourceDVaShot.Play();// Audio DVa shotting
+
             Debug.Log("Pressed Left click.");
 
 
@@ -61,7 +73,14 @@ public class DVaShoot : MonoBehaviour
             InstantiateProjectile(RCFirePoint);
         }
 
-
+        if (_audioSourceDVaShot == null) // audio find code
+        {
+            Debug.LogError("The shot audio for DVa was not found!");
+        }
+        else
+        {
+            _audioSourceDVaShot.clip = _shot;
+        } // end audio
         
     }
 
